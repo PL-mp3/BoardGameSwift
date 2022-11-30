@@ -11,6 +11,8 @@
 		EF03EC9329378DFD00459593 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03EC9229378DFD00459593 /* ContentView.swift */; };
 		EF03EC9529378DFD00459593 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF03EC9429378DFD00459593 /* Assets.xcassets */; };
 		EF03EC9829378DFD00459593 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF03EC9729378DFD00459593 /* Preview Assets.xcassets */; };
+		EF03ECA22937914200459593 /* TopGamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03ECA12937914200459593 /* TopGamesView.swift */; };
+		EF03ECA42937918600459593 /* SearchGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03ECA32937918600459593 /* SearchGameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		EF03EC9229378DFD00459593 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EF03EC9429378DFD00459593 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF03EC9729378DFD00459593 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EF03ECA12937914200459593 /* TopGamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGamesView.swift; sourceTree = "<group>"; };
+		EF03ECA32937918600459593 /* SearchGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,9 @@
 		EF03EC8F29378DFD00459593 /* BoardGameTP */ = {
 			isa = PBXGroup;
 			children = (
+				EF03ECA029378FD800459593 /* ViewModel */,
+				EF03EC9F29378FD200459593 /* View */,
+				EF03EC9E29378FCC00459593 /* Model */,
 				EF03EC9029378DFD00459593 /* BoardGameTPApp.swift */,
 				EF03EC9229378DFD00459593 /* ContentView.swift */,
 				EF03EC9429378DFD00459593 /* Assets.xcassets */,
@@ -65,6 +72,29 @@
 				EF03EC9729378DFD00459593 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EF03EC9E29378FCC00459593 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EF03EC9F29378FD200459593 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF03ECA12937914200459593 /* TopGamesView.swift */,
+				EF03ECA32937918600459593 /* SearchGameView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF03ECA029378FD800459593 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +168,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF03EC9329378DFD00459593 /* ContentView.swift in Sources */,
+				EF03ECA22937914200459593 /* TopGamesView.swift in Sources */,
+				EF03ECA42937918600459593 /* SearchGameView.swift in Sources */,
 				EF03EC9129378DFD00459593 /* BoardGameTPApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
