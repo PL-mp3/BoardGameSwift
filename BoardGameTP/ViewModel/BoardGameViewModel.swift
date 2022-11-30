@@ -16,11 +16,13 @@ class BoardGameViewModel: ObservableObject {
     @Published var gameList = GamesResponse(games: [Game.empty], count: 0)
     
     let gameFetcher = GameFetcher()
+    var nbGames = 0
     
     func getGameList() async throws{
         let gameResponse = try await
-        gameFetcher.getTopGames()
+        gameFetcher.getTopGames(nbGame: nbGames)
         games.append(contentsOf: gameResponse.games)
-        print(games)
+        nbGames += 30
+
     }
 }

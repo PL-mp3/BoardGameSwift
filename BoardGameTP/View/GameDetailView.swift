@@ -12,7 +12,8 @@ struct GameDetailView: View {
     
     var body: some View {
         HStack(alignment: VerticalAlignment.top){
-            VStack{
+            VStack(alignment: HorizontalAlignment.leading){
+                Text(game.name).font(.largeTitle).fontWeight(.bold)
                 AsyncImage(url: URL(string: game.image)) { phase in
                     switch phase {
                     case .empty:
@@ -25,14 +26,12 @@ struct GameDetailView: View {
                             EmptyView()
                     }
                 }
-                .frame(width: 500)
-                Text(game.name).font(.largeTitle)
+                .frame(width: 200)
+                
                 Text(game.description).lineLimit(5)
                 Spacer()
-        
-            }.padding()
-            
-        }
+            }
+        }.padding()
     }
-    }
+}
 
