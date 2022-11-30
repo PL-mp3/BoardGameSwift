@@ -8,12 +8,12 @@
 import Foundation
 
 struct Game{
-    let id: Int
+    let id: String
     let name: String
     let description: String
     let thumbnail: String
     let image: String
-    let price: Double
+    let price: String
     let voteAverage: Double
 }
 
@@ -23,7 +23,7 @@ extension Game: Codable{
     private enum CodingKeys: String, CodingKey{
         case id
         case name
-        case description
+        case description = "description_preview"
         case thumbnail = "thumb_url"
         case image = "image_url"
         case price
@@ -31,11 +31,13 @@ extension Game: Codable{
     }
 }
 
-struct GamesResponse: Codable{
-    let games: [Game]
+extension Game{
+    static var empty: Game{
+        return Game(id:"",name:"",description:"",thumbnail:"",image:"",price:"",voteAverage:0.0)
+    }
 }
 
-extension Game{
-    static var empty: Game{ Game(id:0,name:"",description:"",thumbnail:"",image:"",price:0.0,voteAverage:0.0)
-    }
+struct GamesResponse: Codable{
+    let games: Array<Game>
+    let count: Int
 }

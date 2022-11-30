@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var viewModel = BoardGameViewModel()
+    
     var body: some View {
         TabView{
-            TopGamesView()
+            TopGamesView(viewModel: viewModel)
                 .tabItem {
                     Label("Top games",systemImage: "gamecontroller")
             }

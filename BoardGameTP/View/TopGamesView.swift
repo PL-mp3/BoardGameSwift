@@ -8,18 +8,21 @@
 import SwiftUI
 
 struct TopGamesView: View {
+    @ObservedObject var viewModel: BoardGameViewModel
     var body: some View {
         NavigationView{
             List{
-                Text("Game list view")
+                GameListView(games: viewModel.games)
                     .navigationTitle(Text("Top games"))
+                ProgressView()
+                    .onAppear(){
+                        Task{
+                            try? await viewModel.getGameList()
+                        }
+                    }
             }
+            
         }
     }
 }
 
-struct TopGamesView_Previews: PreviewProvider {
-    static var previews: some View {
-        TopGamesView()
-    }
-}

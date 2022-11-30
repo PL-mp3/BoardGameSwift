@@ -16,6 +16,9 @@
 		EF03ECA8293793BA00459593 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03ECA7293793BA00459593 /* Game.swift */; };
 		EF03ECAA293795C600459593 /* BoardGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03ECA9293795C600459593 /* BoardGameViewModel.swift */; };
 		EF03ECAC293796E700459593 /* GameFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03ECAB293796E700459593 /* GameFetcher.swift */; };
+		EF03ECAE2937A59200459593 /* GameListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03ECAD2937A59200459593 /* GameListView.swift */; };
+		EF03ECB02937A60000459593 /* GameCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03ECAF2937A60000459593 /* GameCellView.swift */; };
+		EF03ECB22937A64A00459593 /* GameDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03ECB12937A64A00459593 /* GameDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 		EF03ECA7293793BA00459593 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		EF03ECA9293795C600459593 /* BoardGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameViewModel.swift; sourceTree = "<group>"; };
 		EF03ECAB293796E700459593 /* GameFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFetcher.swift; sourceTree = "<group>"; };
+		EF03ECAD2937A59200459593 /* GameListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListView.swift; sourceTree = "<group>"; };
+		EF03ECAF2937A60000459593 /* GameCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCellView.swift; sourceTree = "<group>"; };
+		EF03ECB12937A64A00459593 /* GameDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,9 @@
 			children = (
 				EF03ECA12937914200459593 /* TopGamesView.swift */,
 				EF03ECA32937918600459593 /* SearchGameView.swift */,
+				EF03ECAD2937A59200459593 /* GameListView.swift */,
+				EF03ECAF2937A60000459593 /* GameCellView.swift */,
+				EF03ECB12937A64A00459593 /* GameDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -179,9 +188,12 @@
 				EF03EC9329378DFD00459593 /* ContentView.swift in Sources */,
 				EF03ECA8293793BA00459593 /* Game.swift in Sources */,
 				EF03ECA22937914200459593 /* TopGamesView.swift in Sources */,
+				EF03ECB22937A64A00459593 /* GameDetailView.swift in Sources */,
 				EF03ECAC293796E700459593 /* GameFetcher.swift in Sources */,
 				EF03ECAA293795C600459593 /* BoardGameViewModel.swift in Sources */,
 				EF03ECA42937918600459593 /* SearchGameView.swift in Sources */,
+				EF03ECAE2937A59200459593 /* GameListView.swift in Sources */,
+				EF03ECB02937A60000459593 /* GameCellView.swift in Sources */,
 				EF03EC9129378DFD00459593 /* BoardGameTPApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

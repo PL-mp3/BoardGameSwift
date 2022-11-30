@@ -15,7 +15,6 @@ class GameFetcher{
     func getTopGames() async throws -> GamesResponse{
         let request = URLRequest(url: url)
         let (data, _) = try await URLSession.shared.data(for: request)
-        
         let gameList = try jsonDecoder.decode(GamesResponse.self, from: data)
         return gameList
     }
