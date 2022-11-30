@@ -13,8 +13,24 @@ struct GameDetailView: View {
     var body: some View {
         HStack(alignment: VerticalAlignment.top){
             VStack{
-                Text(game.description)
-            }
+                AsyncImage(url: URL(string: game.image)) { phase in
+                    switch phase {
+                    case .empty:
+                        ProgressView()
+                    case .success(let image):
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                    default:
+                            EmptyView()
+                    }
+                }
+                .frame(width: 500)
+                Text(game.name).font(.largeTitle)
+                Text(game.description).lineLimit(5)
+                Spacer()
+        
+            }.padding()
             
         }
     }
