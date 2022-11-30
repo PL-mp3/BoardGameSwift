@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TopGamesView: View {
     @ObservedObject var viewModel: BoardGameViewModel
+    
     var body: some View {
         NavigationView{
             List{
@@ -20,7 +21,8 @@ struct TopGamesView: View {
                             try? await viewModel.getGameList()
                         }
                     }
-            }.navigationTitle(Text("Top games"))
+            }
+            .navigationTitle(Text("Top games"))
         }
     }
 }

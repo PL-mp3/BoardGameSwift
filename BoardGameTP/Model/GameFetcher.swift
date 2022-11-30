@@ -18,4 +18,11 @@ class GameFetcher{
         let gameList = try jsonDecoder.decode(GamesResponse.self, from: data)
         return gameList
     }
+    
+    func getSearchGames(search:String) async throws -> GamesResponse{
+        let request = URLRequest(url: URL(string: url + "&name=\(search)")!)
+        let (data, _) = try await URLSession.shared.data(for: request)
+        let gameList = try jsonDecoder.decode(GamesResponse.self, from: data)
+        return gameList
+    }
 }

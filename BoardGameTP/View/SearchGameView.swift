@@ -8,18 +8,20 @@
 import SwiftUI
 
 struct SearchGameView: View {
+    @ObservedObject var viewModel: BoardGameViewModel
+    @State var searchText = ""
     var body: some View {
         NavigationView{
             List{
-                Text("Search game view")
-                    .navigationTitle(Text("Search games"))
-            }
+                GameListView(games: viewModel.searchedGames)
+                    
+            }.navigationTitle(Text("Search games"))
+                .searchable(text: $searchText)
+                .onChange(of: searchText){_ in
+                    Task{
+                        try? await viewModel.getSearchList(search: searchText)
+                    }
+                }
         }
-    }
-}
-
-struct SearchGameView_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchGameView()
     }
 }
