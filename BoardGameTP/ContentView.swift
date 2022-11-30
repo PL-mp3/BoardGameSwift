@@ -13,7 +13,7 @@ struct ContentView: View {
         TabView{
             TopGamesView(viewModel: viewModel)
                 .tabItem {
-                    Label("Top games",systemImage: "gamecontroller")
+                    Label("Top games",systemImage: "dice")
             }
             SearchGameView(viewModel: viewModel)
                 .tabItem{Label("Search games",systemImage: "magnifyingglass")}

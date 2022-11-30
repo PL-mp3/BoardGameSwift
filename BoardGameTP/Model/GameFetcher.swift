@@ -20,7 +20,7 @@ class GameFetcher{
     }
     
     func getSearchGames(search:String) async throws -> GamesResponse{
-        let request = URLRequest(url: URL(string: url + "&name=\(search)")!)
+        let request = URLRequest(url: URL(string: url + "&name=\(search.replacingOccurrences(of: " ", with: "%20"))")!)
         let (data, _) = try await URLSession.shared.data(for: request)
         let gameList = try jsonDecoder.decode(GamesResponse.self, from: data)
         return gameList
